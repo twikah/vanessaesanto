@@ -5,9 +5,6 @@ class MainController < ApplicationController
   def about
   end
 
-  def projects
-  end
-
   def contact
   end
 
