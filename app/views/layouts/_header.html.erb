@@ -1,0 +1,15 @@
+<!--includes a header for the site’s (plain-text) logo, a couple of divisions (using the div tag), and a list of elements with navigation links-->
+<header class="">
+  <div class="container">
+    <%= link_to "Vanessa Espirito Santo", root_path , id: "logo" %>
+    <nav>
+      <ul class="">
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "About", about_path %></li>
+        <li><%= link_to "Projects", projects_path %></li>
+        <li><%= link_to "Contact", contact_path %></li>
+        <li><%= link_to "Blog", blog_path %></li>
+      </ul>
+    </nav>
+  </div>
+</header>
