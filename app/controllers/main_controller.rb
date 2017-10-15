@@ -6,6 +6,7 @@ class MainController < ApplicationController
   end
 
   def contact
+    @contact = Contact.new
   end
 
   def blog

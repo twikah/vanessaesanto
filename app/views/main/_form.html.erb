@@ -1,0 +1,14 @@
+<%= form_for @contact, url: contacts_path do |f| %>
+  <%= render 'main/error_messages', object: f.object %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name, class: 'form-control' %>
+
+  <%= f.label :email %>
+  <%= f.email_field :email, class: 'form-control' %>
+
+  <%= f.label :content %>
+  <%= f.text_field :content, class: 'form-control' %>
+
+  <%= f.submit "Send", class: "btn btn-primary" %>
+<% end %>

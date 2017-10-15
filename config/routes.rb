@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   root 'main#index'
 
   get '/about', to: 'main#about'
-  get '/contact', to: 'main#contact'
+  get '/contact', to: 'main#contact', as: 'contact'
   get '/blog', to: 'main#blog'
 
   resources :projects, only: [:index, :show]
+  resources :contacts, only: :create
 end
