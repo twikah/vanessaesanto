@@ -1,4 +1,12 @@
-<% provide(:title, "Projects") %>
+<% provide(:title, @project[:name]) %>
 
-<h1>Projects#show</h1>
-<p>Find me in app/views/projects/show.html.erb</p>
+<div class="row">
+  <section class="project_info">
+    <h2>
+      <%= @project[:name] %>
+    </h2>
+  </section>
+  <section class="project_content">
+    <%= render "projects/#{@project[:id]}" %>
+  </section>
+</div>
