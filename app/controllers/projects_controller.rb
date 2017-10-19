@@ -8,8 +8,8 @@ class ProjectsController < ApplicationController
   def show
     @project = @@projects.find { |project| project[:id] == params[:id] }
 
-    if @project.empty?
-      return render text: "Ooops! We couldn't find that project!", status: 404
+    if @project.nil?
+      return render plain: "Ooops! We couldn't find that project!", status: 404
     end
   end
 end
