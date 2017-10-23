@@ -4,7 +4,7 @@ class ContactsController < ApplicationController
 
     if @contact.valid?
       AdminMailer.contact_form_submitted(@contact).deliver
-      redirect_to contact_path, notice: "Thank you! Your message has been sent."
+      redirect_to contact_url, notice: "Thank you! Your message has been sent."
     else
       flash[:alert] = "An error occurred while delivering this message."
       render 'main/contact'

@@ -1,9 +1,9 @@
-<h1>New contact form submitted on vanessaesanto.com!</h1>
+<h2>New contact form submitted on vanessaesanto.com!</h2>
 
 <p>
-  <%= @contact.name %> <<%= @contact.email %>> wrote:
+  <%= @contact[:name] %> &lt;<%= @contact[:email] %>&gt; wrote:
 </p>
 
 <p>
-  <%= @contact.content %>
+  <%= @contact[:content] %>
 </p>

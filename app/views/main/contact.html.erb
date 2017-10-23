@@ -7,10 +7,23 @@
 <section class="row">
   <section class="column">
     <h3>Find me at:</h3>
-    <p><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> vanessaesanto@gmail.com </a></p>
-    <p><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i> https://www.linkedin.com/in/holyvanessa </a></p>
-    <p><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i> @define_vanessa </a></p>
+    <p>
+      <%= mail_to "vanessaesanto@gmail.com" do %>
+        <i class="fa fa-envelope" aria-hidden="true"></i> vanessaesanto@gmail.com
+      <% end %>
+    </p>
+    <p>
+      <%= link_to("https://www.linkedin.com/in/holyvanessa", target: "_blank") do %>
+        <i class="fa fa-linkedin" aria-hidden="true"></i> https://www.linkedin.com/in/holyvanessa/
+      <% end %>
+    </p>
+    <p>
+      <%= link_to("https://twitter.com/define_vanessa", target: "_blank") do %>
+        <i class="fa fa-twitter" aria-hidden="true"></i> @define_vanessa
+      <% end %>
+    </p>
   </section>
+
   <section class="column">
     <%= render 'main/form' %>
   </section>

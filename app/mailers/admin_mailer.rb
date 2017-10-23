@@ -7,6 +7,6 @@ class AdminMailer < ApplicationMailer
   #
   def contact_form_submitted(contact)
     @contact = contact
-    mail to: "vanessaesanto@gmail.com", subject: "New contact form submitted by #{contact.name}"
+    mail to: "vanessaesanto@gmail.com", subject: "New contact form submitted by #{contact[:name]}"
   end
 end

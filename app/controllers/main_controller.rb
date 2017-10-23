@@ -1,4 +1,8 @@
 class MainController < ApplicationController
+  def sitemap
+    redirect_to 'https://therailstutorial-sampleapp.s3.amazonaws.com/sitemaps/sitemap.xml.gz'
+  end
+
   def index
   end
 

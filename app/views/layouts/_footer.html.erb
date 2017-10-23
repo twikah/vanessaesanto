@@ -1,14 +1,28 @@
 <footer class="footer">
   <p>
-    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i> </a>
-    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i> </a>
-    <a href="#"><i class="fa fa-github" aria-hidden="true"></i> </a>
-    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i> </a>
-    <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> </a>
+    <%= link_to("https://www.linkedin.com/in/holyvanessa", target: "_blank") do %>
+      <i class="fa fa-linkedin" aria-hidden="true"></i>
+    <% end %>
+
+    <%= link_to("https://www.facebook.com/vanessaesanto/", target: "_blank") do %>
+      <i class="fa fa-facebook" aria-hidden="true"></i>
+    <% end %>
+
+    <%= link_to("https://github.com/twikah", target: "_blank") do %>
+      <i class="fa fa-github" aria-hidden="true"></i>
+    <% end %>
+
+    <%= link_to("https://twitter.com/define_vanessa", target: "_blank") do %>
+      <i class="fa fa-twitter" aria-hidden="true"></i>
+    <% end %>
+
+    <%= mail_to "vanessaesanto@gmail.com" do %>
+      <i class="fa fa-envelope" aria-hidden="true"></i>
+    <% end %>
   </p>
 
   <p>
     Crafted with <i class="fa fa-heart" aria-hidden="true"></i>
-    by <a href="http://twikah.rocks/">twikah</a> | <a href="#">sitemap</a>
+    by <a href="http://twikah.rocks/" target="_blank">twikah</a>
   </p>
 </footer>

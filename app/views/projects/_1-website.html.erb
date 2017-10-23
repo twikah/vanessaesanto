@@ -1,1 +1,45 @@
-test
+<% provide(:title, "This Website") %>
+
+<section class="">
+  <h2>This Website</h2>
+</section>
+
+<div class="slideshow-container">
+  <div class="this-website-img">
+    <div class="numbertext">1 / 4</div>
+    <img src="img1.jpg" style="width:100%">
+  </div>
+
+  <div class="this-website-img">
+    <div class="numbertext">2 / 4</div>
+    <img src="img2.jpg" style="width:100%">
+  </div>
+
+  <div class="this-website-img">
+    <div class="numbertext">3 / 4</div>
+    <img src="img3.jpg" style="width:100%">
+  </div>
+
+  <div class="this-website-img">
+    <div class="numbertext">4 / 4</div>
+    <img src="img4.jpg" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+
+<section class="content">
+  <p>This was my first adventure in web development! I figured I would need a portfolio and so I started by building my own website. My intention was to present myself to the world and centralise my projects and work-related thoughts all in one place, hence the about, projects and blog pages.</p>
+  <p>I don't have any previous experience in development and my knowlegde comes mainly from the <a href="http://www.railstutorial.org/"> Ruby on Rails Tutorial</a>, as well as the <a href="https://www.learnenough.com/"> Learn Enough Society</a> available tutorials, all by Michael Hartl. I didn't quite know where to begin so I also read several articles on how to build a website. I started by making the wireframes with Balsamiq for the all the pages and for both desktop and mobile screens. By doing this I learned that wireframes helped me a lot not only in the beginning, to think about what I wanted to include and how I wanted to display content, but also while writing the code as I would refer back to the wireframes to check what I had already developed and what was still missing.</p>
+  <p>I struggled a lot with the website structure. I wanted to create a website as light and clean as possible with the tools I learned, which are Ruby on Rails. For that reason I decided I didn't want to store data in databases so I wouldn't need any models. This is why my blog is written in the main blog view with markdown and each of my projects will have its own view file. The will to not store data also led me to discover that I can have a contact form without a model by using the `include ActiveModel::Model` functionalities along with some other modifications.</p>
+  <p>After I finished all core code another struggle took place: CSS.</p>
+</section>
