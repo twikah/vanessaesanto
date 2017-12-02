@@ -1,9 +1,14 @@
 require 'test_helper'
 
 class ProjectsControllerTest < ActionDispatch::IntegrationTest
-  test "should get index" do
+  def setup
+    @base_title = "Vanessa Espirito Santo"
+  end
+
+  test "should get project index" do
     get projects_url
     assert_response :success
+    assert_select "title", "Projects | #{@base_title}"
   end
 
   test "should render a project" do
@@ -12,6 +17,7 @@ class ProjectsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test '404s on missing project' do
-    # TODO
+    get project_url('inexistent')
+    assert_match "Ooops! We couldn't find that project!", response.body
   end
 end

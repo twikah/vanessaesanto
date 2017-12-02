@@ -10,4 +10,11 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", contact_path
     assert_select "a[href=?]", blog_path
   end
+
+  test "project page links" do
+    get projects_path
+    ProjectsController::PROJECTS.each do |project|
+      assert_select "a[href=?]", project_path(project[:id])
+    end
+  end
 end

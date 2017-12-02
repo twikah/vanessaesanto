@@ -3,7 +3,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
 
     if @contact.valid?
-      AdminMailer.contact_form_submitted(@contact).deliver
+      AdminMailer.contact_form_submitted(contact_params).deliver
       redirect_to contact_url, notice: "Thank you! Your message has been sent."
     else
       flash[:alert] = "An error occurred while delivering this message."
