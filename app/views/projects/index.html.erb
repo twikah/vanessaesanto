@@ -3,24 +3,24 @@
 <section class="page">
   <h1 class="page-title">Projects</h1>
 
-  <div class="bio-wrapper">
+  <div class="project-index-wrapper">
     <% @projects.each do |project| %>
-      <section class="bio-box">
+      <section class="project-box">
         <%= link_to project_path(project[:id]) do %>
-          <img src="<%= asset_path("project-#{project[:id]}") %>" alt="Cover image for project #{project[:id]}">
+          <img src="<%= asset_path("project-#{project[:id]}.png") %>" alt="Cover image for project <%= project[:id] %>">
         <% end %>
         <h3><%= link_to project[:name], project_path(project[:id]) %></h3>
-        <div class="bio-copy">
+        <div class="project-box-copy">
           <p><%= project[:description] %></p>
         </div>
       </section>
     <% end %>
 
     <% @placeholder_count.times do %>
-      <section class="bio-box">
+      <section class="project-box">
         <img src="http://placekitten.com/g/400/400">
         <h3>Upcoming!</h3>
-        <div class="bio-copy">
+        <div class="project-box-copy">
           <p>
             Here will lie the description of another project!
           </p>

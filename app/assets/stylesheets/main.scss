@@ -77,11 +77,19 @@ h1,h2,h3,h4,h4,h5,h6 {
   font-family: 'Raleway', helvetica, sans;
   font-weight: 100;
 }
-h1 {
-  font-size: 5vw;
-}
 h2 {
+  color: #466a70;
+  font-weight: bold;
   font-size: 2em;
+  margin: 0.75em;
+  text-align: center;
+}
+h4 {
+  color: #466a70;
+  margin: 1.1em auto;
+  font-weight: bold;
+  font-size: 1.2em;
+  line-height: 1.2;
 }
 p {
   padding-bottom: 0.5em;
@@ -216,24 +224,6 @@ blockquote::before{
   display: none;
 }
 
-// FOOTER STYLES
-.footer {
-  background-color: #fff;
-  padding: 2vh 0;
-  text-align: center;
-  h3 {
-    color: #cdc2c0;
-    padding-top: 1.25em;
-    i {
-      color: #466a70;
-    }
-  }
-  li {
-    display: inline-block;
-    margin: 0 0.5em;
-  }
-}
-
 // SOCIAL STYLES
 .social-link {
   background-color: #998b8a;
@@ -253,6 +243,38 @@ blockquote::before{
   &:active {
     background-color: rgba(70,106,112,0.6);
   }
+}
+
+// PAGE STYLES
+.page {
+  margin: 10vh auto 5vh;
+  max-width: 990px;
+  width: 90vw;
+}
+.page-title {
+  color: #998b8a;
+  font-size: 3em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+// COLUMN STYLES
+.col {
+  box-sizing: border-box;
+  padding: 1.3em;
+}
+.col-two {
+  display: flex;
+  h2 {
+    margin: 0;
+  }
+}
+.col-two .col-aside {
+  flex: 0 0 25em;
+  order: 1;
+}
+.col-two .col-content {
+  flex: 1;
 }
 
 // HOME STYLES
@@ -276,62 +298,78 @@ blockquote::before{
   }
 }
 
-// PAGE STYLES
-.page {
-  margin: 10vh auto 5vh;
-  max-width: 990px;
-  width: 90vw;
-  h2 {
-    color: #466a70;
-    font-weight: bold;
-    font-size: 2em;
-    margin: 0.75em;
-    text-align: center;
-  }
-  h4 {
-    color: #466a70;
-    margin: 1.1em auto;
-    font-weight: bold;
-    font-size: 1.2em;
-    line-height: 1.2;
-  }
-}
-.page-title {
-  color: #998b8a;
-  font-size: 3em;
-  margin-bottom: 1em;
-  text-align: center;
-}
-
- 
-// COLUMN STYLES
-.col {
-  box-sizing: border-box;
-  padding: 1.3em;
-}
-.col-two {
-  display: flex;
-  h2 {
-    margin: 0;
-  }
-}
-.col-two .col-aside {
-  flex: 0 0 25em;
-  order: 1;
-}
-.col-two .col-content {
-  flex: 1;
-}
-
 // ABOUT STYLES
 .gravatar {
   border-radius: 99px;
   width: 11vw;
 }
 
+// PROJECTS STYLES
+.project-index-wrapper {
+  font-size: 24px;
+  margin: auto;
+  max-width: 960px;
+  overflow: hidden;
+}
+.project-box {
+  box-sizing: border-box;
+  float: left;
+  font-size: 1rem;
+  margin: 3rem 0 1.5rem;
+  padding: 0 3%;
+  width: 33%;
+}
+.project-box h3 {
+  color: #fff;
+  font-size: 1.5em;
+  margin: -40px 0 1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+.project-box img {
+  width: 100%;
+}
+.project-box .social-link {
+  display: block;
+  margin: 2em auto 1em;
+}
+.project-box-copy {
+  font-size: 0.75em;
+}
+.project-content {
+  margin-top: 3em;
+}
+.project-gallery-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 990px;
+}
+.gallery-item {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  margin: 2em auto;
+}
+.gallery-item-image {
+  background-color: rgba(70,106,112, 0.3);
+  flex: 0 1 15em;
+  text-align: center;
+  vertical-align: center;
+  img {
+    width: 100%;
+  }
+}
+.gallery-item-copy {
+  flex: 1;
+  font-size: 0.8rem;
+  padding: 0 3vw;
+}
+
 // BLOG STYLES
 .blog-list-wrapper {
   text-align: right;
+  padding-top: 0;
 }
 .blog-title-list {
   list-style: none;
@@ -362,12 +400,6 @@ blockquote::before{
   h2 {
     text-align: left;
   }
-}
-.posts-image {
-  background-position: center;
-  background-size: cover;
-  height: 6em;
-  margin-bottom: 1.5em;
 }
 .post {
   width: 100%;
@@ -447,81 +479,33 @@ blockquote::before{
   }
 }
 
-// PROJECT STYLES
-.bio-wrapper {
-  font-size: 24px;
-  margin: auto;
-  max-width: 960px;
-  overflow: hidden;
-}
-.bio-box {
-  box-sizing: border-box;
-  float: left;
-  font-size: 1rem;
-  margin: 3rem 0 1.5rem;
-  padding: 0 3%;
-  width: 33%;
-}
-.bio-box h3 {
-  color: #fff;
-  font-size: 1.5em;
-  margin: -40px 0 1em;
+// FOOTER STYLES
+.footer {
+  background-color: #fff;
+  padding: 2vh 0;
   text-align: center;
-  text-transform: uppercase;
-}
-.bio-box img {
-  width: 100%;
-}
-.bio-box .social-link {
-  display: block;
-  margin: 2em auto 1em;
-}
-.bio-copy {
-  font-size: 0.75em;
-}
-
-//projects
-.project-content {
-  margin-top: 3em;
-  h4 {
-    margin: 1.7em auto;
+  h3 {
+    color: #cdc2c0;
+    padding-top: 1.25em;
+    i {
+      color: #466a70;
+    }
+  }
+  li {
+    display: inline-block;
+    margin: 0 0.5em;
   }
 }
-.project-gallery-wrapper {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  max-width: 960px;
-}
-.gallery-item {
-  align-items: center;
-  display: flex;
-  flex: 1;
-  margin: 2em auto;
-}
-.gallery-item-image {
-  background-color: rgba(70,106,112, 0.3);
-  flex: 0 1 15em;
-  text-align: center;
-  vertical-align: center;
-  img {
-    width: 100%;
-  }
-}
-.gallery-item-copy {
-  flex: 1;
-  font-size: 0.8rem;
-  padding: 0 3vw;
-}
 
-/* MEDIA QUERIES */
+// MEDIA QUERIES
 @media (max-width: 835px) {
   // GLOBAL STYLES
   p {
     padding-left: 1.5em;
     padding-right: 1.5em;
   }
-  /* HEADER STYLES */
+
+  // HEADER STYLES
   .header-nav {
     padding: 2vh 1em 0 0;
   }
@@ -541,7 +525,7 @@ blockquote::before{
     font-size: 5vw;
   }
 
-  /* MOBILE MENU */
+  // MOBILE MENU
   .show-mobile-menu {
     display: block;
     float: right;
@@ -594,7 +578,7 @@ blockquote::before{
     width: 100%; 
   }
 
-  /* HOME STYLES */
+  // HOME STYLES
   .home-callout {
     flex-direction: column;
   }
@@ -606,11 +590,6 @@ blockquote::before{
   .callout-copy {
     flex: 1;
   }
-  .bio-box {
-    float: none;
-    font-size: 1.3rem;
-    width: auto;
-  }
 
   // ABOUT STYLES
   .gravatar {
@@ -619,6 +598,11 @@ blockquote::before{
   }
 
   // PROJECTS STYLES
+  .project-box {
+    float: none;
+    font-size: 1.3rem;
+    width: auto;
+  }
   .gallery-item {
     flex-direction: column;
   }
@@ -631,9 +615,9 @@ blockquote::before{
     padding-top: 1.1em;
   }
 
-  /* BLOG STYLES */
+  // BLOG STYLES
   .blog-cols {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .blog-posts-wrapper {
     h2 {
@@ -645,14 +629,10 @@ blockquote::before{
     text-align: center;
   }
   .col-two .col-aside {
-    order: 0;
     flex: 1;
   }
-  .post-aside {
-    display: none;
-  }
 
-  //CONTACTS
+  // CONTACT STYLES
   .contact-cols {
     flex-direction: column-reverse;
   }
