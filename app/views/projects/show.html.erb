@@ -1,12 +1,15 @@
 <% provide(:title, @project[:name]) %>
 
-<div class="row">
-  <section class="project_info">
-    <h2>
+<section class="page">
+  <section class="project-header">
+    <h1 class="page-title">
       <%= @project[:name] %>
+    </h1>
+    <h2>
+      <%= @project[:description] %>
     </h2>
   </section>
-  <section class="project_content">
+  <section class="project-content">
     <%= render "projects/#{@project[:id]}" %>
   </section>
-</div>
+</section>

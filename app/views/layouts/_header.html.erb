@@ -1,14 +1,22 @@
-<!--includes a header for the site’s (plain-text) logo, a couple of divisions (using the div tag), and a list of elements with navigation links-->
-<header class="">
-  <div class="container">
-    <%= link_to "Vanessa Espirito Santo", root_path , id: "logo" %>
-    <nav>
-      <ul class="">
-        <li><%= link_to "About", about_path %></li>
-        <li><%= link_to "Projects", projects_path %></li>
-        <li><%= link_to "Contact", contact_path %></li>
-        <li><%= link_to "Blog", blog_path %></li>
-      </ul>
-    </nav>
+<header class="header">
+  <nav>
+    <input type="checkbox" id="mobile-menu" class="mobile-menu-check">
+    <label for="mobile-menu" class="show-mobile-menu">Menu</label>
+    <ul class="header-nav nav-links">
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "About", about_path %></li>
+      <li><%= link_to "Projects", projects_path %></li>
+      <li><%= link_to "Blog", blog_path %></li>
+      <li><%= link_to "Contact", contact_path %></li>
+    </ul>
+  </nav>
+
+  <div class="logo-wrapper">
+    <%= link_to root_path, class: "header-logo" do %>
+      <img src="<%= asset_path('logo-2.svg') %>" alt="VES-logo">
+    <% end %>
+    <%= link_to root_path do %>
+      <h1 class="logo-name">vanessa espirito santo</h1>
+    <% end %>
   </div>
 </header>

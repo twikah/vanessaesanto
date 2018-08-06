@@ -1,11 +1,10 @@
 <% provide(:title, "Home") %>
 
-<section>
-  <h2>Hi there!</h2>
-</section>
-
-<section>
-  <p>I'm glad you're here.</p>
-  <p>I'm currently working really hard to become a web developer, while travelling around the world.</p>
-  <p>Scroll down to know more about me.</p>
-</section>
+<div class="home-callout">
+  <h1 class="callout-title">Hi there! My name is <strong>Vanessa</strong> and this my website.</h1>
+  <div class="callout-copy">
+    <p>It's great that you came to visit me in this little corner of the world wide web.</p>
+    <p>I'm a <span><em>junior web developer</em></span> travelling around the world.</p>
+    <p>Take your time to look around, get to know me a little bit better and check out what I'm doing. If you feel like it, say <%= link_to "hello", contact_path %>!</p>
+  </div>
+</div>

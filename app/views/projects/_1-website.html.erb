@@ -1,43 +1,34 @@
-<section class="">
-  <h2>My First Website</h2>
-</section>
+<h4>This was my first adventure in web development! I figured I would need a portfolio and so I started by building my own website. My intention was to present myself to the world, have a blogging space and also get all my projects in one place.</h4>
 
-<div class="slideshow-container">
-  <div class="this-website-img">
-    <div class="numbertext">1 / 4</div>
-    <img src="img1.jpg" style="width:100%">
+<div class="project-gallery-wrapper">
+  <div class="gallery-item">
+    <div class="gallery-item-image">
+      <img src="<%= asset_path("project-1-gallery-1.png") %>" alt="Website wireframes with my notes on them">   
+    </div>
+    <div class="gallery-item-copy">
+      <p>I don't have any previous experience in development and my knowledge comes mainly from the <a href="http://www.railstutorial.org/"> Ruby on Rails Tutorial</a>, as well as the <a href="https://www.learnenough.com/"> Learn Enough Society</a> tutorials. I didn't quite know where to begin so I also read several articles on how to build a website.</p>
+      <p>I started by making the wireframes with Balsamiq for all desktop and mobile screens. Wireframes helped decide what to include and how to display content. This was a great step because later on while writing the code, I was able to refer back to the wireframes to check what I had already developed and what was still missing.</p>
+    </div>
+  </div>
+  <div class="gallery-item">
+    <div class="gallery-item-image">
+      <img src="<%= asset_path("project-1-gallery-2.png") %>" alt="Me writing code!">   
+    </div>
+    <div class="gallery-item-copy">
+      <p>I struggled a lot with the website's structure. I wanted to create a website as light and clean as possible with the tools I learned, which are mainly Ruby on Rails.</p>
+      <p>For that reason, I decided I didn't want to store data in databases so I wouldn't need any models. This is why my blog is written in the main blog view and each of my projects will have its own view file. The will to not store data also led me to discover that I can have a contact form without a model by using the <code>include ActiveModel::Model</code> functionalities along with some other modifications.</p>
+    </div>
+  </div>
+  <div class="gallery-item">
+    <div class="gallery-item-image">
+      <img src="<%= asset_path("project-1-gallery-3.png") %>" alt="Styling options for the website">    
+    </div>
+    <div class="gallery-item-copy">
+      <p>My next challenge was CSS. I learned the positioning concepts of floating and also about flexbox. I saw how important it is to write CSS that is as modular as possible so you can easily apply the same style in different parts of the website. I tried to use sizing that allows for the website to be as responsive and adaptable to smaller screens as possible. I read about the mobile-first approach but I decided to go desktop-first and adapt to mobile afterwards.</p>
+      <p>Choosing the logo and colour palette also took me some time. I wanted a light website and some pastel colours but couldn't pick a favourite set! As for the logo, I drew 2 versions. The first was cute but seemed too childish so I went with the minimal one.</p>
+    </div>
   </div>
 
-  <div class="this-website-img">
-    <div class="numbertext">2 / 4</div>
-    <img src="img2.jpg" style="width:100%">
-  </div>
+  <h4><em>Et voilá!</em> Here it is, live!</h4>
 
-  <div class="this-website-img">
-    <div class="numbertext">3 / 4</div>
-    <img src="img3.jpg" style="width:100%">
-  </div>
-
-  <div class="this-website-img">
-    <div class="numbertext">4 / 4</div>
-    <img src="img4.jpg" style="width:100%">
-  </div>
-
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-  <span class="dot" onclick="currentSlide(4)"></span>
-</div>
-
-<section class="content">
-  <p>This was my first adventure in web development! I figured I would need a portfolio and so I started by building my own website. My intention was to present myself to the world and centralise my projects and work-related thoughts all in one place, hence the about, projects and blog pages.</p>
-  <p>I don't have any previous experience in development and my knowlegde comes mainly from the <a href="http://www.railstutorial.org/"> Ruby on Rails Tutorial</a>, as well as the <a href="https://www.learnenough.com/"> Learn Enough Society</a> available tutorials, all by Michael Hartl. I didn't quite know where to begin so I also read several articles on how to build a website. I started by making the wireframes with Balsamiq for the all the pages and for both desktop and mobile screens. By doing this I learned that wireframes helped me a lot not only in the beginning, to think about what I wanted to include and how I wanted to display content, but also while writing the code as I would refer back to the wireframes to check what I had already developed and what was still missing.</p>
-  <p>I struggled a lot with the website structure. I wanted to create a website as light and clean as possible with the tools I learned, which are Ruby on Rails. For that reason I decided I didn't want to store data in databases so I wouldn't need any models. This is why my blog is written in the main blog view with markdown and each of my projects will have its own view file. The will to not store data also led me to discover that I can have a contact form without a model by using the `include ActiveModel::Model` functionalities along with some other modifications.</p>
-  <p>After I finished all core code another struggle took place: CSS.</p>
-</section>

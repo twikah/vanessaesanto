@@ -1,30 +1,33 @@
 <% provide(:title, "Contact") %>
 
-<section>
-  <h2>Reach out, say Hi :)</h2>
-</section>
+<section class="page">
+  <h1 class="page-title">Reach out, say Hi!</h1>
 
-<section class="row">
-  <section class="column">
-    <h3>Find me at:</h3>
-    <p>
-      <%= mail_to "vanessaesanto@gmail.com" do %>
-        <i class="fa fa-envelope" aria-hidden="true"></i> vanessaesanto@gmail.com
-      <% end %>
-    </p>
-    <p>
-      <%= link_to("https://www.linkedin.com/in/holyvanessa", target: "_blank") do %>
-        <i class="fa fa-linkedin" aria-hidden="true"></i> https://www.linkedin.com/in/holyvanessa/
-      <% end %>
-    </p>
-    <p>
-      <%= link_to("https://twitter.com/define_vanessa", target: "_blank") do %>
-        <i class="fa fa-twitter" aria-hidden="true"></i> @define_vanessa
-      <% end %>
-    </p>
-  </section>
+  <div class="col-two contact-cols">
+    <div class="col col-content col-form">
+      <h2>Drop me a message:</h2>
+      <%= render 'main/form' %>
+    </div>
 
-  <section class="column">
-    <%= render 'main/form' %>
-  </section>
+    <div class="col col-aside col-social">
+      <h2>Find me at:</h2>
+      <ul class="contact-social-list">
+        <li>
+          <%= mail_to "vanessaesanto@gmail.com" do %>
+            <i class="fa fa-envelope social-link"></i> vanessaesanto@gmail.com
+          <% end %>
+        </li>
+        <li>
+          <%= link_to("https://twitter.com/define_vanessa", target: "_blank") do %>
+            <i class="fa fa-twitter social-link"></i> @define_vanessa
+          <% end %>
+        </li>
+        <li>
+          <%= link_to("https://www.linkedin.com/in/holyvanessa", target: "_blank") do %>
+            <i class="fa fa-linkedin social-link"></i> https://www.linkedin.com/in/holyvanessa/
+          <% end %>
+        </li>
+      </ul>
+    </div>
+  </div>
 </section>

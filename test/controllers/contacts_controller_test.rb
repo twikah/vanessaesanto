@@ -11,7 +11,7 @@ class ContactsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should send an email" do
-    post contacts_url, params: { contact: { name: "V Tester", email: "vanessaesanto@example.com", content: "A test message."} }
+    post contact_url, params: { contact: { name: "V Tester", email: "vanessaesanto@example.com", content: "A test message."} }
     assert_equal 1, ActionMailer::Base.deliveries.size
     assert_redirected_to contact_url
     follow_redirect!
@@ -19,7 +19,7 @@ class ContactsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should not send an email with invalid submission" do
-    post contacts_url, params: { contact: { name: "", email: "email", content: ""} }
+    post contact_url, params: { contact: { name: "", email: "email", content: ""} }
     assert_equal 0, ActionMailer::Base.deliveries.size
     assert_template 'main/contact'
     assert_select "div.alert.alert-alert", text: "An error occurred while delivering this message."
