@@ -5,13 +5,7 @@ SitemapGenerator::Sitemap.default_host = "http://vanessaesanto.com"
 SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
 SitemapGenerator::Sitemap.ping_search_engines('http://vanessaesanto.com')
 SitemapGenerator::Sitemap.public_path = 'tmp/'
-SitemapGenerator::Sitemap.sitemaps_host = "https://therailstutorial-sampleapp.s3.amazonaws.com/"
-SitemapGenerator::Sitemap.adapter = SitemapGenerator::S3Adapter.new(
-                                    :fog_provider => 'AWS',
-                                    :aws_access_key_id => ENV['S3_ACCESS_KEY'],
-                                    :aws_secret_access_key => ENV['S3_SECRET_KEY'],
-                                    :fog_directory => ENV['S3_BUCKET'],
-                                    :fog_region => 'ap-southeast-2')
+SitemapGenerator::Sitemap.sitemaps_host = "http://vanessaesanto.com"
 
 SitemapGenerator::Sitemap.create do
   add root_path, :changefreq => 'never', :priority => 0.75
@@ -23,7 +17,7 @@ SitemapGenerator::Sitemap.create do
   end
 
   add contact_path, :changefreq => 'yearly', :priority => 0.3
-  add blog_path, :changefreq => 'weekly', :priority => 0.2
+  add blog_path, :changefreq => 'weekly', :priority => 0.5
 
   # Put links creation logic here.
   #
@@ -48,3 +42,5 @@ SitemapGenerator::Sitemap.create do
   #     add article_path(article), :lastmod => article.updated_at
   #   end
 end
+
+SitemapGenerator::Sitemap.ping_search_engines
