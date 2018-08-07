@@ -66,7 +66,7 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  host = 'vanessaesanto.com'
+  host = 'http://vanessaesanto.herokuapp.com/'
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
     :address        => 'smtp.sendgrid.net',
@@ -100,4 +100,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # This was added to allow flexible SSL via cloudflare. HTTPS does not match HTTP, and heroku
+  # overrides the X-Forwarded-Proto header. Remove when full SSL on heroku.
+  config.action_controller.forgery_protection_origin_check = false
 end
