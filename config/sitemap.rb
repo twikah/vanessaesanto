@@ -1,9 +1,9 @@
 require 'fog-aws'
 
 # Set the host name for URL creation
-SitemapGenerator::Sitemap.default_host = "http://secret-shore-92899.herokuapp.com"
+SitemapGenerator::Sitemap.default_host = "http://vanessaesanto.com"
 SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
-SitemapGenerator::Sitemap.ping_search_engines('http://secret-shore-92899.herokuapp.com')
+SitemapGenerator::Sitemap.ping_search_engines('http://vanessaesanto.com')
 SitemapGenerator::Sitemap.public_path = 'tmp/'
 SitemapGenerator::Sitemap.sitemaps_host = "https://therailstutorial-sampleapp.s3.amazonaws.com/"
 SitemapGenerator::Sitemap.adapter = SitemapGenerator::S3Adapter.new(
