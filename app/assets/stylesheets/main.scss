@@ -90,6 +90,13 @@ h4 {
   font-weight: bold;
   font-size: 1.2em;
   line-height: 1.2;
+  a {
+    color: #998b8a;
+    text-decoration: none;
+    &:hover {
+      color: #466a70;
+    }
+  }
 }
 p {
   padding-bottom: 0.5em;

@@ -1,0 +1,51 @@
+<h4>I was already working at MLS for a while when this opportunity came around. My boss knew I wanted to pursue web development and said something like "You know what? We could use a new website for the company!" Well ... Challenge accepted! 💪🏼</h4>
+
+<div class="project-gallery-wrapper">
+  <div class="gallery-item">
+    <div class="gallery-item-image">
+      <img src="<%= asset_path("project-2-gallery-1.png") %>" alt="The old MLS website">   
+    </div>
+    <div class="gallery-item-copy">
+      <p>MLS had a Wordpress website from 2012. Since then, the website was never updated and it had even been hacked in March 2017. Back then, me and my boyfriend worked a whole weekend to fix it. I knew nothing about Wordpress or about de-hacking so it was pretty scary 😰 but all ended well!</p>
+      <p>I started by looking at the old website (see picture on the left) to analyse what kinds information to keep and what features to add. The boss said he wanted something similar to the existing website but more modern. The colour palette was to stay blue, red and white.</p>
+    </div>
+  </div>
+  <div class="gallery-item">
+    <div class="gallery-item-image">
+      <img src="<%= asset_path("project-2-gallery-2.jpg") %>" alt="MLS Home page wireframe">   
+    </div>
+    <div class="gallery-item-copy">
+      <p>Next, I drew wireframes, like this one on the left. Wireframes let me and my boss see what the pages would become, helping us decide the best layout, how the content should be positioned. It also helped me be sure I didn't miss any functionality.</p>
+      <p>The major change in the new website was that the Sign Up functionality was brought to the Home page to make it easier for new Doctors to register. The new Jobs page was not a table anymore, it allowed for descriptions on each vacancy and also got a better filtering process. Other changes included adding a contact form to the Contact page and the new Referral page.</p>
+    </div>
+  </div>
+  <div class="gallery-item">
+    <div class="gallery-item-image">
+      <img src="<%= asset_path("project-2-gallery-3.png") %>" alt="Rails logo">
+    </div>
+    <div class="gallery-item-copy">
+      <p>The website was build on Ruby on Rails, the coding language I'm most familiar with. The biggest challenge with the backend was the Jobs page, as other pages we static pages with text or with forms. This involved getting a back-office to post the new jobs and a modal for applying to a job. I used the Rails Admin gem to build the back-office, which mounts an admin structure based upon the existing models. On top of that I created some custom views, some custom fields and a "copy to clipboard" action for easy pasting a job on Social Media. The gem is well maintained so I chose to rely on it. On the "apply to job" functionality, I used Bootstap's modal snippets.</p>
+    </div>
+  </div>
+  <div class="gallery-item">
+    <div class="gallery-item-image">
+      <img src="<%= asset_path("project-2-gallery-4.png") %>" alt="Bootstrap logo">    
+    </div>
+    <div class="gallery-item-copy">
+      <p>In regards to the frontend, my upcoming challenge was to learn Bootstrap. I didn't know much about CSS and knew that Bootstrap provided a faster way to get things pretty. But it wasn't that easy!! I had to learn to think in rows and columns. I discovered the dilemmas of positioning elements side by side, even with Bootstrap's help 🤯</p>
+      <p>I adopted the "desktop first" methodology, so after finishing the desktop version I wanted to get a nice mobile experience. Another reason for using Bootstrap was that it helped making the website responsive. When I first saw the mobile version of the website I still had to make adjustments, but it was already quite good. I ended up writing lots of <code>@media</code> queries for different viewports.</p>
+    </div>
+  </div>
+  <div class="gallery-item">
+    <div class="gallery-item-image">
+      <img src="<%= asset_path("project-2-gallery-5.png") %>" alt="New MLS website">    
+    </div>
+    <div class="gallery-item-copy">
+      <p>With the website ready to deploy, it was time to deal with hosting matters. The website already had its domain and was hosted on DreamHost but I opted to deploy my Rails app with Heroku. This was a seamless experience. I had configured a staging website app right from the beginning but the launching part was pretty easy to set up as well. Finally, I transferred the website's DNS servers to Cloudflare for an extra layer of protection.</p>
+      <p>That's it! It took me 2 months to finish, as I had other tasks to fulfil at the same time I was writing the website. I also needed help from a senior developer at times, otherwise I wouldn't be able to do it. Thanks <a href="http://ferreira.rocks">dear boyfriend</a> for not letting me quit!</p>
+    </div>
+  </div>
+
+  <h4>Here it is the brand new <strong>MLS</strong> website, <strong><a href="http://medicallocumservices.com.au">medicallocumservices.com.au</a></strong>. Please visit!</h4>
+
+</div>
