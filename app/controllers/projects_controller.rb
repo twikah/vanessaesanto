@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
   PROJECTS = [{id: "1-website", name: "This Website", description: "Find out what led me to start my website and how did I do it."},
-               id: "2-mls", name: "MLS Website", description: "See the very first website I made professionally, what challenges it brought me and how I overcame them."]
+              {id: "2-mls", name: "MLS Website", description: "See the very first website I made professionally, what challenges it brought me and how I overcame them."},
+              {id: "3-booking", name: "Booking Platform", description: "I developed a booking and invoicing platform as part of MLS website's back-office."}]
 
   def index
     @projects = PROJECTS
