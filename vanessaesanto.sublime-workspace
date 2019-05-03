@@ -532,18 +532,18 @@
 			"file": "app/views/main/about.html.erb",
 			"settings":
 			{
-				"buffer_size": 1077,
+				"buffer_size": 2515,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "app/views/main/index.html.erb",
 			"settings":
 			{
-				"buffer_size": 253,
+				"buffer_size": 555,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -671,15 +671,7 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Sites/vanessaesanto/vanessaesanto",
-		"/C/Sites/vanessaesanto/vanessaesanto/app",
-		"/C/Sites/vanessaesanto/vanessaesanto/app/assets",
-		"/C/Sites/vanessaesanto/vanessaesanto/app/assets/config",
-		"/C/Sites/vanessaesanto/vanessaesanto/app/views",
-		"/C/Sites/vanessaesanto/vanessaesanto/app/views/layouts",
-		"/C/Sites/vanessaesanto/vanessaesanto/app/views/main",
-		"/C/Sites/vanessaesanto/vanessaesanto/app/views/projects",
-		"/C/Sites/vanessaesanto/vanessaesanto/vendor"
+		"/Users/vanessaespiritosanto/Code/vanessaesanto"
 	],
 	"file_history":
 	[
@@ -814,7 +806,7 @@
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 29.0
 	},
 	"find_in_files":
 	{
@@ -884,20 +876,22 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1077,
+						"buffer_size": 2515,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								963,
-								963
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).sublime-syntax"
+							"syntax": "Packages/Rails/HTML (Rails).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -912,19 +906,20 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 253,
+						"buffer_size": 555,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								61,
-								61
+								0,
+								0
 							]
 						],
 						"settings":
 						{
+							"git_gutter_is_enabled": true,
 							"syntax": "Packages/Rails/HTML (Rails).sublime-syntax"
 						},
 						"translation.x": 0.0,
@@ -939,7 +934,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 22.0
+		"height": 29.0
 	},
 	"input":
 	{
@@ -976,7 +971,7 @@
 	"project": "vanessaesanto.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 54.0
 	},
 	"save_all_on_build": true,
 	"select_file":
