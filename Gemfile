@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# https://devcenter.heroku.com/articles/ruby-support#supported-runtimes
+ruby '2.4.6', :patchlevel => '354'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.0'
