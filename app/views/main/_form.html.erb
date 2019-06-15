@@ -10,5 +10,5 @@
   <%= f.label :content, class: "form-label" %>
   <%= f.text_area :content, rows:"5", class: 'form-field', required: true %>
 
-  <%= f.submit "Send", class: "form-button" %>
+  <%= invisible_recaptcha_tags text: 'Send', class: 'form-button' %>
 <% end %>
