@@ -6,6 +6,14 @@ class MainController < ApplicationController
   def index
   end
 
+  def download_cv
+    send_file(
+      "#{Rails.root}/public/ves_resume_site.pdf",
+      filename: "ves_resume_site.pdf",
+      type: "application/pdf"
+    )
+  end
+
   def about
   end
 
