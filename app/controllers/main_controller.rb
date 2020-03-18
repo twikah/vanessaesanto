@@ -8,8 +8,8 @@ class MainController < ApplicationController
 
   def download_cv
     send_file(
-      "#{Rails.root}/public/ves_resume_site.pdf",
-      filename: "ves_resume_site.pdf",
+      "#{Rails.root}/public/ves_cv_2020.pdf",
+      filename: "ves_cv_2020.pdf",
       type: "application/pdf"
     )
   end

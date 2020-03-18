@@ -288,7 +288,7 @@ blockquote::before{
 .home-callout {
   align-items: center;
   display: flex;
-  padding: 4vh 0; 
+  padding: 4vh 0;
 }
 .callout-title {
   flex: 1;
@@ -432,9 +432,9 @@ blockquote::before{
 .contact-social-list {
   box-sizing: border-box;
   list-style: none;
-  margin-top: 3em;
+  margin: 3em auto 0 2em;
   text-align: left;
-  a { 
+  a {
     color: #998b8a;
     &:hover,
     &:active {
@@ -582,7 +582,7 @@ blockquote::before{
     position: absolute;
     text-align: center;
     top: 1.5em;
-    width: 100%; 
+    width: 100%;
   }
 
   // HOME STYLES
