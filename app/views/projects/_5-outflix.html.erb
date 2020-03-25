@@ -1,0 +1,117 @@
+<h4>
+  Outflix was my final project for Le Wagon's web dev bootcamp. As a team of 4,
+  we used a RESTful API, Rails tasks and Heroku scheduler to update content and
+  notify users of new expiring titles on Netflix via email or SMS.
+</h4>
+
+<div class="project-gallery-wrapper">
+  <div class="gallery-item">
+    <div class="gallery-item-image">
+      <img src="<%= image_path("project-5-outflix-website.png") %>" alt="Outflix website">
+    </div>
+    <div class="gallery-item-copy">
+      <p>
+        Netflix does not warn users when their content leaves the platform. As a
+        result, sometimes we search on Netflix for a show that we wanted to
+        watch and, uh oh! It's not available anymore 😬.
+      </p>
+      <p>
+        We wanted to fix this. The original idea pitched was to access the
+        movies and TV shows on each user's Netflix 'My List' and import them
+        directly to Outflix dashboard. Our app would then cross the titles on
+        that list with an API that would have information on its expiring dates.
+        Finally, we would notify users whenever a title from their 'My
+        List' is about to expire.
+      </p>
+    </div>
+  </div>
+  <div class="gallery-item">
+    <div class="gallery-item-image">
+      <%= video_tag 'project-5-dashboard.mov', width: "240", autoplay: :autoplay,
+          loop: :loop, muted: :muted %>
+    </div>
+    <div class="gallery-item-copy">
+      <p>
+        We set out to explore how to accomplish this. Unfortunately, Netflix
+        closed its public API in 2014 and, without it, 1) we'd have no access
+        the user's 'My List' and 2) no access to each title's expiring date.
+      </p>
+      <p>
+        So we changed the product a bit. We designed a dashboard of every
+        expiring title, grouped by week, for a user's country. Users would be
+        able to filter titles by type (movie or TV show), rating and genre.
+        Then, instead of notifying Ouflix users of expiring titles from a
+        tailored list, we would notify the users of all the expiring titles for
+        their country.
+      </p>
+    </div>
+  </div>
+  <div class="gallery-item">
+    <div class="gallery-item-image">
+      <img src="<%= asset_path("project-5-api-diagram.png") %>" alt="api diagram">
+    </div>
+    <div class="gallery-item-copy">
+      <p>
+        Displaying expiring titles became possible because we found an
+        unofficial API (Unogs) that lists all expiring titles per country. With
+        this sorted, the next challenge was to find the best approach to parse
+        and accommodate the API call results.
+      </p>
+      <p>
+        Because this is a paid API we didn't want to be calling the API every
+        time users would go see their dashboards.
+        We decided to create a service that calls the API and caches both
+        the query and the result as jsonb on a dedicated table. Then we added
+        another service that fetches all the details that we wanted to extract
+        - such as title, genre, rating, expiring date - and store it on a
+        Content table.
+      </p>
+    </div>
+  </div>
+  <div class="gallery-item">
+    <div class="gallery-item-image">
+      <img src="<%= asset_path("project-5-works-on-my-machine.png") %>"
+           alt="development meme 'works on my machine'">
+    </div>
+    <div class="gallery-item-copy">
+      <p>
+        This design allowed us to replace API calls by fetching content from the
+        database. This also helped with faster loading times, which in turn
+        resulted in providing a better UX.
+      </p>
+      <p>
+        During this time we were constantly deploying the app to Heroku to
+        stay on top of any issues that might pop up. Of course, there were many
+        ocasions where the code failed in production... But it worked on our
+        machines! 🤯
+      </p>
+    </div>
+  </div>
+  <div class="gallery-item">
+    <div class="gallery-item-image">
+      <img src="<%= asset_path("project-5-outflix-email.png") %>" alt="Outflix email">
+    </div>
+    <div class="gallery-item-copy">
+      <p>
+        Next up we dealt with the notification system, which was our core value.
+        We decided to set up notifications via email or SMS with a weekly or
+        monthly schedule. To do this, we used Rails mailers and integrated with
+        Twilio for SMS delivery.
+      </p>
+      <p>
+        To send the notifications periodically and to update the database weekly,
+        we set up rake tasks. Then, with the help of Heroku scheduler, we set up
+        jobs on Heroku to run the rake tasks every day. The rake tasks evaluate
+        the day of the week and, if it is Monday, the tasks are executed!
+      </p>
+    </div>
+  </div>
+
+  <h4>
+    This project was completed in just 10 days at the end of the bootcamp!
+    There were moments of tension, tears and joy. It was a mix of emotions but
+    it was ultimately a great experience to work within a team and be able to
+    ship a real working web app in so little time.
+  </h4>
+
+</div>
