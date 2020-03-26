@@ -18,12 +18,12 @@ class ProjectsController < ApplicationController
                 description: 'I developed a booking and invoicing platform as
                               part of MLS website\'s back-office.'
               },
-              # {
-                # id: '4-secret-sessions',
-                # name: 'Secret Sessions',
-                # description: 'Secret Sessions is a marketplace for promoting
-                #               movie screenings in secret and special locations.'
-              # },
+              {
+                id: '4-secret-sessions',
+                name: 'Secret Sessions',
+                description: 'Secret Sessions is a marketplace for promoting
+                              movie screenings in secret and special locations.'
+              },
               {
                 id: '5-outflix',
                 name: 'Outflix',
